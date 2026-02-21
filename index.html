@@ -1,11 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplicacion del tiempo</title>
+    <link rel="icon" href="./src/temperatura.png">
 </head>
+
 <body>
-    <h1>Aplicacion del tiempo</h1>
+    <header>
+        <div>
+            <img src="./src/dia .png" alt="sol" width="50">
+            <p>Weather Now</p>
+        </div>
+        <div>
+            <div>
+
+
+                <select name="units" id="units">
+                    <option value="" disabled selected>⚙️Units</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+
+                </select>
+            </div>
+            <main>
+                <div>
+                    <h1>How's the sky looking today</h1>
+
+                </div>
+                <div>
+                    <form>
+                        <div>
+
+                            <input type="text" id="search" placeholder="search for a place">
+                        </div>
+                        <div>
+                            <button>Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <div>
+                        <h2><span id="city">Berlin</span>,<span id="country">Germany</span></h2>
+
+                        <p><span id="day">Tuesday</span>,<span id="month">Aug 5</span>,<span id="year">2025</span> </p>
+                    </div>
+                    <div>
+                        <h2><span id="temperature">20</span>°</h2>
+                    </div>
+                </div>
+                <div>
+                    <section id="weather-details">
+                        <div>
+                            <p>Feels Like</p>
+                            <p><span id="feels-like">18</span>°</p>
+                        </div>
+
+                        <div>
+                            <p>Humidity</p>
+                            <p><span id="humidity">46</span>%</p>
+                        </div>
+                        <div>
+                            <p>Wind</p>
+                            <p><span id="wind">14</span>km/h</p>
+                        </div>
+                        <div>
+                            <p>Precipitation</p>
+                            <p><span id="precipitation">18</span>mm</p>
+                        </div>
+
+
+                    </section>
+                </div>
+                <div>
+                    <section>
+                        <h3>Daily forecast</h3>
+                        <div>
+                            <div>
+                                <h4>Tue</h4>
+                                <img id="weather-icon-tue" src="./src/lluvia.png" alt="weather icon" width="50">
+                                <p><span id="temp-min-tue">20</span>°<span id="temp-max-tue">14</span>°</p>
+                            </div>
+                            <div>
+                                <h4>Wed</h4>
+                                <img id="weather-icon-wed" src="./src/lluvia (1).png" alt="weather icon" width="50">
+                                <p><span id="temp-min-wed">21</span>°<span id="temp-max-wed">15</span>°</p>
+                            </div>
+                            <div>
+
+                                <h4>Thu</h4>
+                                <img id="weather-icon-thu" src="./src/sol.png" alt="weather icon" width="50">
+                                <p><span id="temp-min-thu">24</span>°<span id="temp-max-thu">14</span>°</p>
+                            </div>
+                            <div>
+                                <h4>Fri</h4>
+                                <img id="weather-icon-fri" src="./src/dia-nublado.png" alt="weather icon" width="50">
+                                <p><span id="temp-min-fri">25</span>°<span id="temp-max-fri">13</span>°</p>
+                            </div>
+                            <div>
+                                <h4>Sat</h4>
+                                <img id="weather-icon-sat" src="./src/tormenta-electrica.png" alt="weather icon"
+                                    width="50">
+                                <p><span id="temp-min-sat">21</span>°<span id="temp-max-sat">15</span>°</p>
+                            </div>
+
+                            <h4>Sun</h4>
+                            <img id="weather-icon-sun" src="./src/lluvia (2).png" alt="weather icon" width="50">
+                            <p><span id="temp-min-sun">25</span>°<span id="temp-max-tue">16</span>°</p>
+
+                        </div>
+                        <div>
+                            <h4>Mon</h4>
+                            <img id="weather-icon-mon" src="./src/lluvia-de-meteoros.png" alt="weather icon" width="50">
+                            <p><span id="temp-min-mon">24</span>°<span id="temp-max-mon">15</span>°</p>
+                        </div>
+                </div>
+                </section>
+                <div>
+                    <section>
+                        <div>
+                            <h3>Hourly forecast</h3>
+                        </div>
+                        <div>
+                            <select name="days" id="days">
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+
+
+                            </select>
+                            <div id="hours-container">
+
+                                <article class="hour">
+                                    <h4>3 PM</h4>
+                                    <img id="weather-icon-3pm" src="./src/lluvia (2).png" alt="weather icon" width="50">
+                                    <p><span id="temp-hour-3PM">28</span>°</p>
+
+                                </article>
+
+                                <article class="hour">
+                                    <h4>4 PM</h4>
+                                    <img id="weather-icon-4pm" src="./src/dia-nublado.png" alt="weather icon"
+                                        width="50">
+                                    <p><span id="temp-hour-4PM">27</span>°</p>
+                                </article>
+
+                                <article class="hour">
+                                    <h4>5 PM</h4>
+                                    <img id="weather-icon-5pm" src="./src/lluvia.png" alt="weather icon" width="50">
+                                    <p><span id="temp-hour-5PM">26</span>°</p>
+
+                                </article>
+
+                                <article class="hour">
+                                    <h4>6 PM</h4>
+                                    <img id="weather-icon-6pm" src="./src/sol.png" alt="weather icon" width="50">
+                                    <p><span id="temp-hour-6PM">24</span>°</p>
+
+                                </article>
+                                <article class="hour">
+                                    <h4>7 PM</h4>
+                                    <img id="weather-icon-7pm" src="./src/lluvia-de-meteoros.png" alt="weather icon"
+                                        width="50">
+                                    <p><span id="temp-hour-7PM">22</span>°</p>
+
+                                </article>
+
+                                <article class="hour">
+                                    <h4>8 PM</h4>
+                                    <img id="weather-icon-8pm" src="./src/lluvia (1).png" alt="weather icon" width="50">
+                                    <p><span id="temp-hour-8PM">19</span>°</p>
+
+                                </article>
+                                <article class="hour">
+                                    <h4>9 PM</h4>
+                                    <img id="weather-icon-9pm" src="./src/lluvia.png" alt="weather icon" width="50">
+                                    <p><span id="temp-hour-9PM">15</span>°</p>
+
+                                </article>
+                                <article class="hour">
+                                    <h4>10 PM</h4>
+                                    <img id="weather-icon-10pm" src="./src/dia-nublado.png" alt="weather icon"
+                                        width="50">
+                                    <p><span id="temp-hour-10PM">11</span>°</p>
+
+                                </article>
+
+                            </div>
+
+
+                    </section>
+                </div>
+        </div>
+        </main>
+        </div>
+    </header>
+
 </body>
+
 </html>
